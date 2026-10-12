@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marco Nieves — Author | Fractured Realities</title>
+<meta name="description" content="Marco Nieves writes adult multiverse science-fiction thrillers. Fractured Realities, Book One: As The Sun Rises — on submission to literary agents.">
+<style>
+  :root{
+    --bg:#0d0f14; --panel:#11151e; --ink:#e7e3da; --muted:#9a9789;
+    --gold:#e0b36a; --gold-dim:#8a6d3a; --blue:#6fb7c9; --violet:#a98cc4; --purple:#7b5ea7; --magenta:#d972b0;
+    --line:#2a2f3d;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.7;overflow-x:hidden}
+  a{color:var(--blue)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+
+  /* top bar */
+  .top{position:sticky;top:0;z-index:50;background:rgba(13,15,20,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  .top .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+  .brand{font-family:-apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.22em;text-transform:uppercase;font-size:.8em;color:var(--gold);text-decoration:none}
+  nav{display:flex;gap:28px;font-family:-apple-system,Segoe UI,Roboto,sans-serif;font-size:.72em;letter-spacing:.18em;text-transform:uppercase}
+  nav a{color:var(--ink);text-decoration:none}
+  nav a:hover{color:var(--gold)}
+  @media(max-width:760px){nav{display:none}}
+
+  /* hero */
+  .hero{position:relative;min-height:82vh;display:flex;align-items:center;border-bottom:1px solid var(--line);overflow:hidden}
+  .nebula{position:absolute;top:-20%;right:-12%;width:66%;height:140%;pointer-events:none;z-index:0;
+    background:
+      radial-gradient(46% 42% at 62% 46%, rgba(169,140,196,.55), transparent 70%),
+      radial-gradient(34% 30% at 52% 38%, rgba(111,183,201,.32), transparent 72%),
+      radial-gradient(26% 24% at 68% 52%, rgba(217,114,176,.30), transparent 72%),
+      radial-gradient(15% 13% at 58% 42%, #f3e6ff, transparent 60%);
+    filter:blur(7px);opacity:.92}
+  .hero .wrap{position:relative;z-index:2;padding-top:40px;padding-bottom:40px}
+  .eyebrow{text-transform:uppercase;letter-spacing:.26em;font-size:.72em;color:var(--violet);font-family:-apple-system,Segoe UI,Roboto,sans-serif;margin-bottom:20px}
+  h1{font-size:clamp(2.6em,6.4vw,4.6em);font-weight:400;letter-spacing:.02em;line-height:1.02;color:var(--gold)}
+  .logline{margin-top:22px;font-size:1.15em;font-style:italic;max-width:560px;color:var(--ink)}
+  .cta{margin-top:36px;display:flex;gap:16px;flex-wrap:wrap}
+  .btn{display:inline-block;background:var(--gold);color:#1a1408;padding:15px 34px;border-radius:6px;text-decoration:none;font-weight:bold;font-family:-apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.05em;font-size:.92em;box-shadow:0 0 40px rgba(224,179,106,.22)}
+  .btn:hover{background:#e8c078}
+  .btn.ghost{background:transparent;color:var(--gold);border:1px solid var(--gold-dim);box-shadow:none}
+  .btn.ghost:hover{background:rgba(224,179,106,.08)}
+  .grad{height:5px;background:linear-gradient(90deg,var(--blue),var(--violet),var(--magenta))}
+
+  section{padding:84px 0;border-bottom:1px solid var(--line)}
+  .kicker{text-transform:uppercase;letter-spacing:.22em;font-size:.72em;color:var(--blue);font-family:-apple-system,Segoe UI,Roboto,sans-serif;margin-bottom:14px}
+  h2{font-size:clamp(1.7em,3.4vw,2.4em);font-weight:400;color:var(--gold);letter-spacing:.03em;margin-bottom:26px}
+  h3{font-size:1.15em;color:var(--violet);font-weight:400;margin-bottom:8px}
+  p{color:var(--ink)}
+  .lead{font-size:1.08em}
+  .muted{color:var(--muted)}
+
+  .grid{display:grid;gap:22px}
+  .g2{grid-template-columns:1fr 1fr}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:820px){.g2,.g3{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:28px}
+  .card p{color:var(--muted);font-size:.95em}
+  .tag{display:inline-block;font-family:-apple-system,Segoe UI,Roboto,sans-serif;font-size:.68em;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-dim);border-radius:999px;padding:5px 12px;margin-bottom:14px}
+
+  .about{display:grid;grid-template-columns:200px 1fr;gap:36px;align-items:start}
+  @media(max-width:760px){.about{grid-template-columns:1fr}}
+  .mono{width:200px;height:200px;border-radius:12px;border:1px solid var(--line);background:
+     radial-gradient(60% 60% at 50% 45%, rgba(169,140,196,.5), transparent 70%), var(--panel);
+     display:flex;align-items:center;justify-content:center;font-size:3.4em;color:var(--gold);font-family:Georgia,serif}
+
+  .news{background:linear-gradient(180deg,rgba(169,140,196,.06),transparent)}
+  .form{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;max-width:560px}
+  .form input{flex:1;min-width:220px;background:#0a0c11;border:1px solid var(--line);border-radius:6px;padding:14px 16px;color:var(--ink);font-family:inherit;font-size:1em}
+  .form input:focus{outline:none;border-color:var(--gold-dim)}
+  .note{font-family:-apple-system,Segoe UI,Roboto,sans-serif;font-size:.76em;color:var(--muted);margin-top:12px}
+
+  footer{padding:44px 0 64px;color:var(--muted);font-family:-apple-system,Segoe UI,Roboto,sans-serif;font-size:.82em}
+  footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="wrap">
+    <a class="brand" href="#home">Marco Nieves</a>
+    <nav>
+      <a href="#books">Books</a>
+      <a href="#worlds">Worlds</a>
+      <a href="#about">About</a>
+      <a href="#podcast">Podcast</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<header class="hero" id="home">
+  <div class="nebula"></div>
+  <div class="wrap">
+    <p class="eyebrow">A Multiverse Science-Fiction Thriller</p>
+    <h1>Fractured Realities</h1>
+    <p class="logline">Two people remember a night together that their worlds say never happened &mdash; because they are crossing between realities, and the crossings are tearing the multiverse apart.</p>
+    <div class="cta">
+      <a class="btn" href="#books">Read the opening</a>
+      <a class="btn ghost" href="#news">Join the newsletter</a>
+    </div>
+  </div>
+</header>
+<div class="grad"></div>
+
+<section id="books">
+  <div class="wrap">
+    <p class="kicker">The Series</p>
+    <h2>Fractured Realities</h2>
+    <p class="lead" style="max-width:720px">A multiverse science-fiction trilogy about the people the multiverse keeps tearing apart &mdash; across a set of parallel New Yorks, ordinary lives collide between dimensions.</p>
+    <div class="grid g2" style="margin-top:34px">
+      <div class="card">
+        <span class="tag">Book One</span>
+        <h3>As The Sun Rises</h3>
+        <p>Roman Martin wakes up with one sneaker and a memory his best friend says never happened. Nadia Rai remembers the same night &mdash; from a New York that isn&rsquo;t his. They are crossing between realities without knowing how, and every crossing widens a crack that threatens every world at once.</p>
+        <p class="muted" style="margin-top:12px">Adult science-fiction thriller &middot; on submission to literary agents.</p>
+        <p style="margin-top:16px"><a href="https://dsfxmn1.github.io/deliverables/pulse/fractured-realities-excerpt/">&rarr; Read the opening</a></p>
+      </div>
+      <div class="card">
+        <span class="tag">Book Two</span>
+        <h3>The Fractured Realities series continues</h3>
+        <p>The next book is in development. More worlds, more bonds &mdash; and a crack that keeps growing.</p>
+        <p class="muted" style="margin-top:12px">Details to come.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="worlds">
+  <div class="wrap">
+    <p class="kicker">The Worlds</p>
+    <h2>Many New Yorks, stacked beside each other</h2>
+    <div class="grid g3" style="margin-top:30px">
+      <div class="card"><h3>The Rift</h3><p>Close enough to share a skyline, far enough that the maps disagree. Some cross these worlds on purpose. Some fall through by accident. Every crossing widens the crack.</p></div>
+      <div class="card"><h3>A Language Born of Catastrophe</h3><p>In the ruined world, survivors speak a creole that grew the way real creoles do &mdash; English for meaning, with Japanese, Korean and Spanish woven through.</p></div>
+      <div class="card"><h3>Not Every Name Maps Cleanly</h3><p>A person&rsquo;s double across dimensions shares their face and little else. Same word, different world &mdash; and most people only ever hold one half of the mapping.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <p class="kicker">About</p>
+    <h2>Marco Nieves</h2>
+    <div class="about">
+      <div class="mono">MN</div>
+      <div>
+        <p>Marco Nieves is a Nuyorican writer born and raised in Manhattan&rsquo;s East Village, in a Puerto Rican household where the culture was everyday life. Growing up, he was often too ethnic for some rooms and too gringo for others &mdash; and he learned early what it means to be caught between who you are and who the world will let you be. That tension lives in his work.</p>
+        <p style="margin-top:14px">His debut novel, <em>As The Sun Rises</em>, opens the Fractured Realities series. He has also had two plays produced off-off-Broadway in New York.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="podcast">
+  <div class="wrap">
+    <p class="kicker">Podcast</p>
+    <h2>The Storypot</h2>
+    <p class="lead" style="max-width:680px;font-style:italic">&ldquo;Every story is made from the finest, home grown ingredients.&rdquo;</p>
+    <p style="margin-top:14px;max-width:680px">A fiction podcast of short stories written to be heard out loud &mdash; golden-age radio drama for the ear. Stories from the world of Fractured Realities, and beyond.</p>
+    <div class="cta" style="margin-top:26px">
+      <a class="btn" href="https://buymeacoffee.com/storypot">Support the show</a>
+    </div>
+    <p class="note">Coming early 2027 &middot; subscribe links to follow.</p>
+  </div>
+</section>
+
+<section id="news" class="news">
+  <div class="wrap">
+    <p class="kicker">Stay in the loop</p>
+    <h2>Be first to know</h2>
+    <p style="max-width:600px">News on the series, the podcast, and the road to publication &mdash; straight to your inbox. No spam.</p>
+    <form class="form" onsubmit="return false">
+      <input type="email" placeholder="you@example.com" aria-label="Email">
+      <button class="btn" type="submit">Subscribe</button>
+    </form>
+    <p class="note">Newsletter wiring in progress.</p>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap row">
+    <span>&copy; 2026 Marco Nieves &middot; Indomitable Creations</span>
+    <span>Marco@nieves.com</span>
+  </div>
+</footer>
+
+</body>
+</html>
